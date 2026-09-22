@@ -1,76 +1,82 @@
 ---
-title: "Astro Sphere"
-description: "Portfolio and blog build with astro."
-date: "Mar 18 2024"
-demoURL: "https://astro-sphere-demo.vercel.app"
-repoURL: "https://github.com/markhorn-dev/astro-sphere"
+
+title: "TeaCareAI"
+
+description: "AI-powered tea disease detection, treatment recommendation and recovery tracking system."
+
+date: "Jun 2025"
+
+demoURL: "https://github.com/visharaaa/TeaCareAI"
+
+repoURL: "https://github.com/visharaaa/TeaCareAI"
+
 ---
 
-![Astro Sphere Lighthouse Score](/astro-sphere.jpg)
+TeaCareAI is a full-stack AI-powered platform designed to help tea farmers and agronomists detect and manage tea plantation diseases. The system combines computer vision, Retrieval-Augmented Generation (RAG), and deep learning to identify diseases from tea leaf images, provide context-aware treatment recommendations, and track plant recovery over time.
 
-Astro Sphere is a static, minimalist, lightweight, lightning fast portfolio and blog theme based on my personal website.
+The project was developed with a focus on Sri Lankan tea plantations, combining disease detection with localized agricultural knowledge and field-level analytics.
 
-It is primarily Astro, Tailwind and Typescript, with a very small amount of SolidJS for stateful components.
+## 🌱 Features
 
-## 🚀 Deploy your own
+* ✅ Tea leaf image verification
+* ✅ AI-powered disease detection using YOLOv8
+* ✅ Infection severity estimation
+* ✅ Retrieval-Augmented Generation (RAG) for treatment recommendations
+* ✅ Localized agricultural knowledge base
+* ✅ Natural language treatment explanations using Llama 3.1
+* ✅ Treatment and recovery tracking
+* ✅ Deep learning-based recovery prediction
+* ✅ Field management and crop analytics
+* ✅ PostgreSQL database integration
+* ✅ Flask-based backend
+* ✅ Docker support
 
-<div class="flex gap-2">
-  <a target="_blank" aria-label="Deploy with Vercel" href="https://vercel.com/new/clone?repository-url=https://github.com/markhorn-dev/astro-sphere">
-    <img src="/deploy_vercel.svg" />
-  </a>
-  <a target="_blank" aria-label="Deploy with Netlify" href="https://app.netlify.com/start/deploy?repository=https://github.com/markhorn-dev/astro-sphere">
-    <img src="/deploy_netlify.svg" />
-  </a>
-</div>
+## 🤖 AI & Machine Learning
 
-## 📋 Features
+### Disease Detection
 
-- ✅ 100/100 Lighthouse performance
-- ✅ Responsive
-- ✅ Accessible
-- ✅ SEO-friendly
-- ✅ Typesafe
-- ✅ Minimal style
-- ✅ Light/Dark Theme
-- ✅ Animated UI
-- ✅ Tailwind styling
-- ✅ Auto generated sitemap
-- ✅ Auto generated RSS Feed
-- ✅ Markdown support
-- ✅ MDX Support (components in your markdown)
-- ✅ Searchable content (posts and projects)
+A YOLOv8-based computer vision model identifies tea leaf diseases from uploaded images and estimates the percentage of the leaf affected by the disease.
 
-## 💯 Lighthouse score
-![Astro Sphere Lighthouse Score](/lighthouse.png)
+### Treatment Recommendation
 
-## 🕊️ Lightweight
-All pages under 100kb (including fonts)
+A RAG pipeline combines ChromaDB with BGE-small-en-v1.5 embeddings to retrieve relevant agricultural knowledge from a localized treatment repository. Llama 3.1 is then used to convert the retrieved information into practical treatment guidance.
 
-## ⚡︎ Fast
-Rendered in ~40ms on localhost
+### Recovery Tracking
 
-## 📄 Configuration
+A TensorFlow/Keras neural network analyzes sequential plant health data to determine whether a plant is improving, deteriorating, stable, or being newly tracked.
 
-The blog posts on the demo serve as the documentation and configuration.
+## 🏗️ Architecture
 
-## 💻 Commands
+TeaCareAI uses a modular Flask backend connecting independent machine learning services with a PostgreSQL data layer.
 
-All commands are run from the root of the project, from a terminal:
+The main components include:
 
-Replace npm with your package manager of choice. `npm`, `pnpm`, `yarn`, `bun`, etc
+* **Computer Vision:** YOLOv8 / PyTorch
+* **RAG:** ChromaDB + SentenceTransformers
+* **LLM:** Llama 3.1 via Ollama
+* **Recovery Model:** TensorFlow / Keras
+* **Backend:** Flask
+* **Database:** PostgreSQL
+* **Deployment:** Docker
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run sync`            | Generates TypeScript types for all Astro modules.|
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-| `npm run lint`            | Run ESLint                                       |
-| `npm run lint:fix`        | Auto-fix ESLint issues                           |
+## 🔄 User Flow
 
-## 🏛️ License
+1. Create an account and manage tea fields.
+2. Upload a tea leaf image for analysis.
+3. Verify that the uploaded image contains a tea leaf.
+4. Detect the disease and estimate infection severity.
+5. Retrieve relevant agricultural knowledge using RAG.
+6. Generate context-aware treatment recommendations.
+7. Track subsequent scans to monitor recovery.
+8. Analyze plant and field-level information over time.
 
-MIT
+## 📊 Project Highlights
+
+* Built as a modular full-stack AI system rather than a standalone classification model.
+* Combined computer vision, RAG, LLMs, and predictive analytics into a single workflow.
+* Incorporated localized agricultural knowledge for tea disease management.
+* Designed recovery tracking to evaluate changes in plant health across multiple scans.
+
+## 💻 Technologies
+
+`Python` · `YOLOv8` · `PyTorch` · `TensorFlow` · `Keras` · `Flask` · `ChromaDB` · `SentenceTransformers` · `Llama 3.1` · `Ollama` · `PostgreSQL` · `Docker`
