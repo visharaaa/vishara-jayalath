@@ -18,18 +18,18 @@ The project was developed with a focus on Sri Lankan tea plantations, combining 
 
 ## 🌱 Features
 
-*  Tea leaf image verification
-*  AI-powered disease detection using YOLOv8
-*  Infection severity estimation
-*  Retrieval-Augmented Generation (RAG) for treatment recommendations
-*  Localized agricultural knowledge base
-*  Natural language treatment explanations using Llama 3.1
-*  Treatment and recovery tracking
-*  Deep learning-based recovery prediction
-*  Field management and crop analytics
-*  PostgreSQL database integration
-*  Flask-based backend
-*  Docker support
+* Tea leaf image verification
+* AI-powered disease detection using YOLOv8
+* Infection severity estimation
+* Retrieval-Augmented Generation (RAG) for treatment recommendations
+* Localized agricultural knowledge base
+* Natural language treatment explanations using Llama 3.1
+* Treatment and recovery tracking
+* Deep learning-based recovery prediction
+* Field management and crop analytics
+* PostgreSQL database integration
+* Flask-based backend
+* Docker support
 
 ## 🤖 AI & Machine Learning
 
