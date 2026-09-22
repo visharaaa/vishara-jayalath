@@ -1,68 +1,82 @@
 ---
 
-title: "Lab Report Analyzer"
+title: "TeaCareAI"
 
-description: "LLM-powered blood report analyzer using structured extraction, normalization and Retrieval-Augmented Generation."
+description: "AI-powered tea disease detection and treatment recommendation system."
 
-date: "Sep 2026"
+date: "Jun 2025"
 
-demoURL: "https://github.com/visharaaa/lab-report-analyzer"
+demoURL: "https://youtu.be/u05saYMyKJM?si=gGhTzhhFRkoOg8LI"
 
-repoURL: "https://github.com/visharaaa/lab-report-analyzer"
+repoURL: "https://github.com/visharaaa/TeaCareAI"
 
 ---
 
-![Lab Report Analyzer](/lab-report-analyzer.png)
+TeaCareAI is a full-stack AI-powered platform designed to help tea farmers and agronomists detect and manage tea plantation diseases. The system combines computer vision, Retrieval-Augmented Generation (RAG), and deep learning to identify diseases from tea leaf images, provide context-aware treatment recommendations, and track plant recovery over time.
 
-Lab Report Analyzer is an AI-powered application designed to convert blood test reports into structured results and explain them in clear, easy-to-understand language.
+The project was developed with a focus on Sri Lankan tea plantations, combining disease detection with localized agricultural knowledge and field-level analytics.
 
-The system focuses on CBC, HbA1c and blood glucose results, combining structured data extraction, result normalization, Retrieval-Augmented Generation (RAG), and an LLM to provide contextual explanations while keeping safety and uncertainty in mind.
+## 🌱 Features
 
-## 📋 Features
+* Tea leaf image verification
+* AI-powered disease detection using YOLOv8
+* Infection severity estimation
+* Retrieval-Augmented Generation (RAG) for treatment recommendations
+* Localized agricultural knowledge base
+* Natural language treatment explanations using Llama 3.1
+* Treatment and recovery tracking
+* Deep learning-based recovery prediction
+* Field management and crop analytics
+* PostgreSQL database integration
+* Flask-based backend
+* Docker support
 
-* Blood report text extraction
-* Structured laboratory result parsing
-* Result normalization and standardization
-* CBC analysis
-* HbA1c analysis
-* Blood glucose analysis
-* Reference range interpretation
-* Retrieval-Augmented Generation (RAG)
-* Medical knowledge base
-* Plain-language explanations
-* Confidence-aware processing
-* Safety-focused response handling
-* Pydantic data validation
-* Automated testing with pytest
+## 🤖 AI & Machine Learning
 
-## 🤖 AI & RAG
+### Disease Detection
 
-The application uses a Retrieval-Augmented Generation pipeline to provide explanations based on a curated knowledge base rather than relying entirely on the language model's internal knowledge.
+A YOLOv8-based computer vision model identifies tea leaf diseases from uploaded images and estimates the percentage of the leaf affected by the disease.
 
-Relevant information is retrieved based on the extracted laboratory results and passed to the LLM as contextual information for generating the final explanation.
+### Treatment Recommendation
 
-The current knowledge base focuses on:
+A RAG pipeline combines ChromaDB with BGE-small-en-v1.5 embeddings to retrieve relevant agricultural knowledge from a localized treatment repository. Llama 3.1 is then used to convert the retrieved information into practical treatment guidance.
 
-* **CBC:** Complete Blood Count parameters and common interpretations
-* **HbA1c:** Long-term blood glucose measurement and reference ranges
-* **Glucose:** Blood glucose measurements and contextual interpretation
+### Recovery Tracking
 
-## 🔄 Processing Pipeline
-
-1. Extract laboratory results from a blood report.
-2. Parse values, units and reference ranges.
-3. Normalize test names into standardized representations.
-4. Validate the structured results using Pydantic models.
-5. Retrieve relevant information from the medical knowledge base.
-6. Provide the retrieved context to the language model.
-7. Generate a plain-language explanation.
-8. Apply safety-focused handling before presenting the response.
+A TensorFlow/Keras neural network analyzes sequential plant health data to determine whether a plant is improving, deteriorating, stable, or being newly tracked.
 
 ## 🏗️ Architecture
 
-The project is organized into modular components for extraction, normalization, retrieval, LLM processing and safety handling.
+TeaCareAI uses a modular Flask backend connecting independent machine learning services with a PostgreSQL data layer.
 
-* **Extraction:** Converts report text into structured laboratory results.
-* **Normalization:** Standardizes test names, units and values.
-* **RAG:** Retrieves relevant information from the knowledge base.
-* **LLM:** Generates contextua
+The main components include:
+
+* **Computer Vision:** YOLOv8 / PyTorch
+* **RAG:** ChromaDB + SentenceTransformers
+* **LLM:** Llama 3.1 via Ollama
+* **Recovery Model:** TensorFlow / Keras
+* **Backend:** Flask
+* **Database:** PostgreSQL
+* **Deployment:** Docker
+
+## 🔄 User Flow
+
+1. Create an account and manage tea fields.
+2. Upload a tea leaf image for analysis.
+3. Verify that the uploaded image contains a tea leaf.
+4. Detect the disease and estimate infection severity.
+5. Retrieve relevant agricultural knowledge using RAG.
+6. Generate context-aware treatment recommendations.
+7. Track subsequent scans to monitor recovery.
+8. Analyze plant and field-level information over time.
+
+## 📊 Project Highlights
+
+* Built as a modular full-stack AI system rather than a standalone classification model.
+* Combined computer vision, RAG, LLMs, and predictive analytics into a single workflow.
+* Incorporated localized agricultural knowledge for tea disease management.
+* Designed recovery tracking to evaluate changes in plant health across multiple scans.
+
+## 💻 Technologies
+
+`Python` · `YOLOv8` · `PyTorch` · `TensorFlow` · `Keras` · `Flask` · `ChromaDB` · `SentenceTransformers` · `Llama 3.1` · `Ollama` · `PostgreSQL` · `Docker`
