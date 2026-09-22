@@ -1,5 +1,9 @@
-just my portfolio
+# vishara-jayalath
 
-## 🏛️ License
+my portfolio.
 
-MIT
+---
+
+<sub>
+forked from https://github.com/markhorn-dev/astro-nano. mit license.
+</sub>
