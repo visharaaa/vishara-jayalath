@@ -12,8 +12,6 @@ repoURL: "https://github.com/visharaaa/lab-report-analyzer"
 
 ---
 
-![Lab Report Analyzer](/lab-report-analyzer.png)
-
 Lab Report Analyzer is an AI-powered application designed to convert blood test reports into structured results and explain them in clear, easy-to-understand language.
 
 The system focuses on CBC, HbA1c and blood glucose results, combining structured data extraction, result normalization, Retrieval-Augmented Generation (RAG), and an LLM to provide contextual explanations while keeping safety and uncertainty in mind.
