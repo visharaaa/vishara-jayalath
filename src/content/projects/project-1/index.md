@@ -6,7 +6,7 @@ description: "AI-powered tea disease detection, treatment recommendation and rec
 
 date: "Jun 2025"
 
-demoURL: "https://github.com/visharaaa/TeaCareAI"
+demoURL: "https://youtu.be/u05saYMyKJM?si=gGhTzhhFRkoOg8LI"
 
 repoURL: "https://github.com/visharaaa/TeaCareAI"
 
